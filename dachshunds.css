@@ -195,3 +195,28 @@ img {
 img:hover {
     transform: scale(1.3); /* Increase the size to 120% on hover */
 }
+
+<style>
+/* Style for the card container */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px; /* Adjust the width as needed */
+    background-color: #f0f0f0;
+}
+
+/* Style for the card title */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for the card text */
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+</style>

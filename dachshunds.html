@@ -47,41 +47,76 @@
             color: #007bff;
             text-decoration: none;
         }
-
-        
     </style>
 </head>
 <body>
     <header>
-        <h1>German Dogs</h1>
+        <h1>Dogs of Germany</h1>
     </header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link" href="dachshund2.html">Dachshunds</a>
-              <a class="nav-link" href="greatdane.html">Great Danes</a>
-              <a class="nav-link" href="boxer.html">Boxer</a>
-              <a class="nav-link" href="otherbreeds.html">Other breeds</a>
-              
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="dachshund2.html">Dachshunds</a>
+                    <a class="nav-link" href="greatdane.html">Great Danes</a>
+                    <a class="nav-link" href="boxer.html">Boxer</a>
+                    <a class="nav-link" href="otherbreeds.html">Other breeds</a>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
     <div class="container">
-        <img class="dachshund-image" src="https://formydachshund.com/wp-content/uploads/2021/01/Depositphotos_348260676_slowmotiongli.jpg" alt="Dachshund Image">
-        <p>Dachshunds (commonly known as sausage dogs) are a popular dog breed known for their unique appearance and playful personality. There are three coat types of Dachshunds:</p>
-        <ul>
-            <li>Smooth (Short-Haired)</li>
-            <li>Longhaired</li>
-            <li>Wirehaired</li>
-        </ul>
-        <p>Each coat type has its own characteristics and charm. To learn more about each type select above.</p>
-    </div>
+        <button id="prev-button">Previous</button>
+<button id="next-button">Next</button>
+        <img class="dachshund-image img-fluid" src="https://c8.alamy.com/comp/W3BM1X/dogs-by-country-of-origin-german-dog-breeds-shepherds-hunting-herding-toy-working-and-service-dogs-set-vector-illustration-W3BM1X.jpg" alt="Dachshund Image">
+        <script>
+            // JavaScript code for image slider
+            let imageIndex = 0;
+            const images = [
+              "https://c8.alamy.com/comp/W3BM1X/dogs-by-country-of-origin-german-dog-breeds-shepherds-hunting-herding-toy-working-and-service-dogs-set-vector-illustration-W3BM1X.jpg",
+              "https://www.deutschland.de/sites/default/files/media/image/Grafik-Hunderassen.jpg",
+            ];
+          
+            function changeImage(direction) {
+              if (direction === 'next') {
+                imageIndex = (imageIndex + 1) % images.length;
+              } else if (direction === 'prev') {
+                imageIndex = (imageIndex - 1 + images.length) % images.length;
+              }
+          
+              const imageElement = document.querySelector('.dachshund-image');
+              imageElement.src = images[imageIndex];
+            }
+          
+            
+            const nextButton = document.querySelector('#next-button');
+            const prevButton = document.querySelector('#prev-button');
+          
+            nextButton.addEventListener('click', () => changeImage('next'));
+            prevButton.addEventListener('click', () => changeImage('prev'));
+          </script>
+          
+        <p>German dogs can refer to various dog breeds that originated in Germany or are closely associated with the country. Some well-known German dog breeds include:
 
+            German Shepherd: Known for their intelligence, loyalty, and versatility, German Shepherds are often used as police, search and rescue, and working dogs. They have a distinctive appearance with a strong, athletic build and a keen sense of smell.
+            
+            Rottweiler: Rottweilers are powerful and loyal dogs with a distinctive black and tan coat. They were originally bred for herding and guarding tasks and are known for their protective nature.
+            
+            Dachshund: Dachshunds, often referred to as "wiener dogs" or "sausage dogs," have elongated bodies and short legs. They were originally bred for hunting small game, particularly badgers.
+            
+            Doberman Pinscher: Dobermans are known for their sleek and muscular appearance. They are intelligent, obedient, and make excellent guard dogs.
+            
+            Great Dane: Great Danes are one of the largest dog breeds in the world, known for their gentle and friendly nature despite their imposing size. They were originally bred as hunting and guard dogs.
+            
+            Boxer: Boxers are medium-sized, muscular dogs with strong jaws. They are energetic, playful, and loyal, often used as working and family dogs.
+            
+            These are just a few examples of German dog breeds. Germany has a rich history of breeding various dog types for specific purposes, and their dogs are known for their diverse characteristics and capabilities.</p>
     
+        <p>Each coat type has its own characteristics and charm. To learn more about each type, select above.</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
